@@ -2,14 +2,16 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { AnimatedCircularProgress } from 'react-native-circular-progress';
 
-export default function ProgressBar(){
+export default function ProgressBar(props){
+
+  const progress = (props.progress/props.progress)*100
     return(
         <View style={styles.progress}>
             <AnimatedCircularProgress
                 size={220}
                 width={15}
                 backgroundWidth={5}
-                fill={80}
+                fill={progress}
                 tintColor="#00ff00"
                 tintColorSecondary="#ff0000"
                 backgroundColor="#3d5875"

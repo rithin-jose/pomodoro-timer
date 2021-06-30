@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, {useEffect,useState} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import ProgressBar from './components/ProgressBar';
 import Timer from './components/Timer'
@@ -8,11 +8,13 @@ import Session from './components/Session'
 import Quotes from './components/Quotes'
 
 export default function App() {
-  
+  const [minutes,setMinutes] = useState(25);
+  const [seconds,setSeconds] = useState('00');
+
   return (
     <View style={styles.container}>
-      <ProgressBar/>
-      <Timer/>
+      <ProgressBar progress={minutes}/>
+      <Timer minute={minutes} second={seconds}/>
       <Controller/>
       <Session/>
       <Quotes/>

@@ -1,13 +1,15 @@
-import React from 'react';
+import React,{useEffect,useState} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Dimensions } from 'react-native';
 
 const windowWidth = Dimensions.get('window').width;
 
-export default function Timer(){
+export default function Timer(props){
+
+
     return(
         <View style={styles.timer}>
-            <Text style={styles.count}>00:00</Text>
+            <Text style={styles.count}>{props.minute}:{props.second}</Text>
         </View>
     )
 }
