@@ -8,16 +8,24 @@ import Session from './components/Session'
 import Quotes from './components/Quotes'
 
 export default function App() {
+  
   const [minutes,setMinutes] = useState(25);
   const [seconds,setSeconds] = useState('00');
+  const [timer,runTimer] = useState(false);
 
   return (
     <View style={styles.container}>
+
       <ProgressBar progress={minutes}/>
+
       <Timer minute={minutes} second={seconds}/>
-      <Controller/>
+
+      <Controller timer={timer}/>
+
       <Session/>
+
       <Quotes/>
+
     </View>
   );
 }

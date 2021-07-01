@@ -7,6 +7,7 @@ export default function ProgressBar(props){
   const progress = (props.progress/props.progress)*100
     return(
         <View style={styles.progress}>
+
             <AnimatedCircularProgress
                 size={220}
                 width={15}
@@ -19,6 +20,7 @@ export default function ProgressBar(props){
                 rotation={-110}
                 lineCap="round"
                 />
+                
       </View>
     )
 }

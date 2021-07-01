@@ -6,9 +6,12 @@ const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
 export default function Session(){
+
     return(
         <View style={styles.session}>
+
             <Text style={styles.details}>Session: count</Text>
+            
         </View>
     )
 }

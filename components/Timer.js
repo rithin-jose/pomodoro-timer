@@ -9,7 +9,9 @@ export default function Timer(props){
 
     return(
         <View style={styles.timer}>
+
             <Text style={styles.count}>{props.minute}:{props.second}</Text>
+            
         </View>
     )
 }

@@ -5,9 +5,12 @@ import { Dimensions } from 'react-native';
 const windowWidth = Dimensions.get('window').width;
 
 export default function Quotes(){
+
     return(
         <View style={styles.wrapper}>
+
             <Text style={styles.quote}>test</Text>
+            
         </View>
     )
 }
